@@ -1,3 +1,71 @@
-.section :first-child{
+.section {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.section :first-child {
     flex-direction: column;
+    gap: 64px;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px !important;
+    align-self: stretch;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.why {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4%;
+}
+
+.whycard {
+    display: flex;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 32px !important;
+    width: 48%;
+    padding-bottom: 40px;
+}
+
+.cardtext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+/* Styles for small screens */
+@media only screen and (max-width: 768px) {
+    .why {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .whycard {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        justify-content: center !important;
+        gap: 32px !important;
+        padding-bottom: 40px;
+        width: 100% !important;
+        max-width: 100% !important;
+
+    }
 }

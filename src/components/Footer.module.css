@@ -1,0 +1,32 @@
+.footer {
+    background: var(--main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer .content {
+    display: flex;
+    max-width: 900px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.copyrights {
+    position: absolute;
+    display: flex;
+    padding: 16px 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    left: 0px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+}

@@ -7,11 +7,11 @@ export default function Why() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <div>
+        <div className={styles.head}>
           <h2>
             Why Choose <i>ProBuy?</i>
           </h2>
-          <div>
+          <div className={styles.tabs}>
             <Tab id="sme" active={active} onTab={() => setActive("sme")}>
               I’m an SME
             </Tab>
@@ -20,24 +20,34 @@ export default function Why() {
             </Tab>
           </div>
         </div>
-
-        {sme.map((item) => (
-          <div key={item.id}>
-            <div>
-              <img src={item.icon} />
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.des}</p>
+        <div className={styles.why}>
+          {active === "sme" &&
+            smeData.map((item) => (
+              <div key={item.id} className={styles.whycard}>
+                <img src={item.icon} />
+                <div className={styles.cardtext}>
+                  <h3>{item.title}</h3>
+                  <p>{item.des}</p>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+            ))}
+          {active === "supp" &&
+            suppData.map((item) => (
+              <div key={item.id} className={styles.whycard}>
+                <img src={item.icon} />
+                <div className={styles.cardtext}>
+                  <h3>{item.title}</h3>
+                  <p>{item.des}</p>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </section>
   );
 }
 
-const sme = [
+const smeData = [
   {
     id: 1,
     icon: "./assets/web/SIMwhy01.svg",
@@ -61,5 +71,31 @@ const sme = [
     icon: "./assets/web/SIMwhy04.svg",
     title: "Transparent Terms",
     des: "We believe in transparency. Our terms are straightforward, with no hidden fees. You&apos;ll always know what to expect.",
+  },
+];
+const suppData = [
+  {
+    id: 1,
+    icon: "./assets/web/whysupp01.svg",
+    title: "Payments Upfront!",
+    des: "Say goodbye to collection headaches, and collect your money with every purchase made through our platform. For a discount fee on each transaction.",
+  },
+  {
+    id: 2,
+    icon: "./assets/web/whysupp02.svg",
+    title: "Your Personal Relationship Manager",
+    des: "ProBuy will handle the payments, returns, and collections on your-behalf, allowing you to concrete on growing your business.",
+  },
+  {
+    id: 3,
+    icon: "./assets/web/whysupp03.svg",
+    title: "Increase Your Customers Base",
+    des: "Reach a wide range of clients with our platform.",
+  },
+  {
+    id: 4,
+    icon: "./assets/web/whysupp04.svg",
+    title: "",
+    des: "Probuy is here to help you manage your liquidity.",
   },
 ];

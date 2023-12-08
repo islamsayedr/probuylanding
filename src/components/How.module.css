@@ -1,0 +1,134 @@
+.howBG {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -10;
+}
+
+.howBG_c {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -10;
+}
+
+.howBG_m {
+    display: none;
+}
+
+
+
+
+.section {
+    background: rgba(255, 255, 255, 0.09);
+    position: relative;
+
+}
+
+.section :first-child {
+    flex-direction: column;
+    gap: 64px;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px !important;
+    align-self: stretch;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.why {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4%;
+}
+
+.why :nth-child(1) {
+    margin-right: auto;
+}
+
+.why :nth-child(2) {
+    margin: auto;
+}
+
+.why :nth-child(3) {
+    margin-left: auto;
+}
+
+.whycard {
+    display: flex;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 32px !important;
+    width: 48%;
+    padding-bottom: 40px;
+}
+
+.cardtext {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+/* Styles for small screens */
+@media only screen and (max-width: 768px) {
+    .why {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .whycard {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        justify-content: center !important;
+        gap: 32px !important;
+        padding-bottom: 40px;
+        width: 100% !important;
+        max-width: 100% !important;
+
+    }
+
+    .why :nth-child(1) {
+        margin: auto;
+    }
+
+    .why :nth-child(2) {
+        margin: auto;
+    }
+
+    .why :nth-child(3) {
+        margin: auto;
+    }
+
+    .howBG {
+        display: none;
+    }
+
+    .howBG_c {
+        display: none;
+    }
+
+    .howBG_m {
+        display: flex;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: -10;
+    }
+}
