@@ -1,0 +1,36 @@
+/* btn ****************** */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    gap: 8px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.btn.p {
+    border: none;
+    background-image: var(--main);
+}
+
+.btn.s {
+    border: 1px solid #EF6B2A;
+
+}
+
+.btn.t {
+    border: 1px solid var(--white);
+}
+
+.btn.lg {
+    padding: 12px 24px;
+
+}
+
+.btn.m {
+    padding: 8px 24px;
+
+}

@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Trebuchet';
+    src: local('Trebuchet'), url('public/assets/fonts/Trebuchet-bold.ttf') format('truetype');
+    font-weight: regulr;
+}
+@font-face {
+    font-family: 'Trebuchet';
+    src: local('Trebuchet'), url('public/assets/fonts/Trebuchet-bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --main: linear-gradient(129deg, #EF6B2A 0%, #F1BC62 100%);
+}
+
+body {
+    font-family: 'YourFontName', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+section {
+    padding: 88px 0px;
+}
+
+.container {
+    display: flex;
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+h1 i {
+    background: var(--main);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+
+}
+
+p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+/* Styles for small screens */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    section {
+        padding: 32px 16px;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+}
