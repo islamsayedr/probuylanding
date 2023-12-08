@@ -1,0 +1,24 @@
+button.tab {
+    color: var(--white);
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.tab.active {
+    border-radius: 12px;
+    background: #FFF;
+    color: #000;
+    text-align: right;
+    font-family: Somar Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 171.429% */
+}
