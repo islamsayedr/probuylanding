@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Why from "./components/Why";
 import How from "./components/How";
+import JoinUs from "./components/JoinUs";
 import Footer from "./components/Footer";
 import './reset.css'
 import './global.css'
@@ -15,6 +16,7 @@ export default function App() {
       <Hero />
       <Why />
       <How />
+      <JoinUs />
       <Footer />
     </>
   );

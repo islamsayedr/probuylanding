@@ -1,0 +1,88 @@
+input,
+select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    width: 100%;
+
+
+}
+select{
+    width: 50%;
+}
+/* Style the options if needed */
+select option {
+    background-color: #000;
+    color: var(--white);
+    padding: 8px 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    align-self: stretch;
+
+}
+
+/* btn ****************** */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    background-image: var(--main);
+    padding: 12px 24px;
+}
+
+.formContainer {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.formContainer div {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.formContainer div button {
+    flex: 1;
+}
+@media only screen and (max-width: 768px) {
+    .formContainer div {
+        display: flex;
+        flex-direction: row !important;
+    }
+    .formContainer form div {
+        flex-direction: column !important;
+
+    }
+    .formContainer form div select{
+        width: 100%;
+        
+    }
+    .btn{
+        width: 100%;
+    }
+}

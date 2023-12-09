@@ -1,0 +1,10 @@
+section.join :first-child {
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    section.join :first-child {
+        flex-direction: column;
+        text-align: center;
+    }
+}
