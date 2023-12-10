@@ -1,5 +1,5 @@
 import { useForm } from "@formspree/react";
-import styles from "./SupForm.module.css";
+import styles from "./SMEform.module.css";
 
 export default function SMEform({ lang }) {
   const [state, handleSubmit] = useForm("xvojewlp");
