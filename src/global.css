@@ -10,6 +10,8 @@
     font-weight: 700;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;600&display=swap');
+
 
 
 :root {
@@ -19,13 +21,16 @@
 }
 
 body {
-    font-family: 'Trebuchet', sans-serif;
+    /* font-family: 'Trebuchet', sans-serif; */
     background-color: var(--black);
     color: var(--white);
+
 }
 
 section {
     padding: 88px 0px;
+    overflow: hidden;
+
 }
 
 .container {

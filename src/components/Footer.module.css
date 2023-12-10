@@ -18,12 +18,10 @@
 }
 
 .copyrights {
-    position: absolute;
     display: flex;
     padding: 16px 16px;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     left: 0px;
     font-size: 14px;
     font-style: normal;

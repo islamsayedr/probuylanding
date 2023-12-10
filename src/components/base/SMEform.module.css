@@ -12,12 +12,12 @@ select {
     line-height: 24px;
     font-weight: 300;
     width: 100%;
+    /* text-align: left !important; */
 
 
 }
-select{
-    width: 50%;
-}
+
+
 /* Style the options if needed */
 select option {
     background-color: #000;
@@ -48,41 +48,35 @@ form {
     padding: 12px 24px;
 }
 
-.formContainer {
-    display: flex;
-    padding: 24px;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 24px;
-    flex: 1 0 0;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.05);
-}
 
-.formContainer div {
+
+div.last {
     display: flex;
     align-items: flex-start;
+    flex-direction: row !important;
+    width: 100% !important;
     gap: 12px;
-    align-self: stretch;
 }
-
-.formContainer div button {
-    flex: 1;
+div.last span{
+    margin: -6px;
 }
 @media only screen and (max-width: 768px) {
     .formContainer div {
         display: flex;
         flex-direction: row !important;
     }
+
     .formContainer form div {
         flex-direction: column !important;
 
     }
-    .formContainer form div select{
+
+    .formContainer form div select {
         width: 100%;
-        
+
     }
-    .btn{
+
+    .btn {
         width: 100%;
     }
 }
