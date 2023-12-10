@@ -1,5 +1,5 @@
 import { useForm } from "@formspree/react";
-import styles from "./Supform.module.css";
+import styles from "./SupForm.module.css";
 
 export default function SupForm({ lang }) {
   const [state, handleSubmit] = useForm("mdorqpne");
