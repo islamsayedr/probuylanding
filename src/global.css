@@ -1,109 +1,111 @@
-@font-face {
-    font-family: 'Trebuchet';
-    src: local('Trebuc'), url('assets/fonts/trebuc.ttf') format('truetype');
-    font-weight: 300;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;500&display=swap');
 
-@font-face {
-    font-family: 'Trebuchet';
-    src: local('Trebucbd'), url('assets/fonts/trebucbd.ttf') format('truetype');
-    font-weight: 700;
-}
+  @font-face {
+      font-family: 'Trebuchet';
+      src: local('Trebuc'), url('assets/fonts/trebuc.ttf') format('truetype');
+      font-weight: 300;
+  }
 
-@font-face {
-    font-family: 'Changa';
-    src: local('Changa-Regular'), url('assets/fonts/Changa-Regular.ttf') format('truetype');
-    font-weight: 300;
-}
+  @font-face {
+      font-family: 'Trebuchet';
+      src: local('Trebucbd'), url('assets/fonts/trebucbd.ttf') format('truetype');
+      font-weight: 700;
+  }
 
-@font-face {
-    font-family: 'Changa';
-    src: local('Changa-Bold'), url('assets/fonts/Changa-Bold.ttf') format('truetype');
-    font-weight: 700;
-}
+  /* @font-face {
+      font-family: 'Changa';
+      src: local('Changa-Regular'), url('assets/fonts/Changa-Regular.ttf') format('truetype');
+      font-weight: 300;
+  }
 
-:root {
-    --black: #000;
-    --white: #fff;
-    --main: linear-gradient(129deg, #EF6B2A 0%, #F1BC62 100%);
-}
+  @font-face {
+      font-family: 'Changa';
+      src: local('Changa-Bold'), url('assets/fonts/Changa-Bold.ttf') format('truetype');
+      font-weight: 700;
+  } */
 
-body {
-    font-family: 'Changa', sans-serif;
-    background-color: var(--black);
-    color: var(--white);
+  :root {
+      --black: #000;
+      --white: #fff;
+      --main: linear-gradient(129deg, #EF6B2A 0%, #F1BC62 100%);
+  }
 
-}
+  body {
+      font-family: 'Changa', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
 
-section {
-    padding: 88px 0px;
-    overflow: hidden;
+  }
 
-}
+  section {
+      padding: 88px 0px;
+      overflow: hidden;
 
-.container {
-    display: flex;
-    width: 85%;
-    max-width: 1200px;
-    margin: auto;
-}
+  }
 
-h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-}
+  .container {
+      display: flex;
+      width: 85%;
+      max-width: 1200px;
+      margin: auto;
+  }
 
-h2 {
-    text-align: center;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 56px;
-}
+  h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+  }
 
-h3 {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px;
-    width: 100%;
-}
+  h2 {
+      text-align: center;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 56px;
+  }
 
-i {
-    background: var(--main);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: normal;
+  h3 {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px;
+      width: 100%;
+  }
 
-}
+  i {
+      background: var(--main);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-style: normal;
 
-p {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 28px;
-}
+  }
 
-/* Styles for small screens */
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
+  p {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 28px;
+  }
 
-    section {
-        padding: 32px 16px;
-    }
+  /* Styles for small screens */
+  @media only screen and (max-width: 768px) {
+      .container {
+          width: 100%;
+      }
 
-    h1 {
-        font-size: 36px;
-        line-height: 56px;
-    }
+      section {
+          padding: 32px 16px;
+      }
 
-    p {
-        font-size: 16px;
-        line-height: 24px;
-    }
+      h1 {
+          font-size: 36px;
+          line-height: 56px;
+      }
 
-}
+      p {
+          font-size: 16px;
+          line-height: 24px;
+      }
+
+  }
