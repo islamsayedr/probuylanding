@@ -1,18 +1,25 @@
 @font-face {
     font-family: 'Trebuchet';
-    src: local('Trebuchet'), url('public/assets/fonts/Trebuchet-regular.ttf') format('truetype');
+    src: local('Trebuc'), url('public/assets/fonts/Trebuc.ttf') format('truetype');
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Trebuchet';
-    src: local('Trebuchet'), url('public/assets/fonts/Trebuchet-bold.ttf') format('truetype');
+    src: local('Trebucbd'), url('public/assets/fonts/Trebucbd.ttf') format('truetype');
     font-weight: 700;
 }
+@font-face {
+    font-family: 'Changa';
+    src: local('Changa-Regular'), url('public/assets/fonts/Changa-Regular.ttf') format('truetype');
+    font-weight: 300;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;600&display=swap');
-
-
+@font-face {
+    font-family: 'Changa';
+    src: local('Changa-Bold'), url('public/assets/fonts/Changa-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
 
 :root {
     --black: #000;
@@ -21,7 +28,7 @@
 }
 
 body {
-    /* font-family: 'Trebuchet', sans-serif; */
+    font-family: 'Changa', sans-serif;
     background-color: var(--black);
     color: var(--white);
 
