@@ -41,7 +41,7 @@ export default function JoinUs({ lang }) {
               {lang === "AR" ? "مورد" : "I’m a supplier"}
             </Tab>
           </div>
-          {active === "sme" ? <SMEform /> : <SupForm />}
+          {active === "sme" ? <SMEform lang={lang} /> : <SupForm lang={lang} />}
         </div>
       </div>
     </section>

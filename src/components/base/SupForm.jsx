@@ -9,61 +9,129 @@ export default function SupForm({ lang }) {
   return (
     <form onSubmit={handleSubmit}>
       <span></span>
-      <input name="User Name" type="text" placeholder="your name..."></input>
+
+      <input
+        name="User Name"
+        type="text"
+        placeholder={lang === "AR" ? "اكتب اسمك..." : "Your name..."}
+      ></input>
       <input
         name="Company name"
         type="text"
-        placeholder="company name..."
+        placeholder={lang === "AR" ? "اسم الشركة..." : "company name..."}
       ></input>
-      <input name="CR Number" type="number" placeholder="CR Number..."></input>
+      <input
+        name="CR Number"
+        type="number"
+        placeholder={lang === "AR" ? "رقم السجل التجارى..." : "CR Number..."}
+      ></input>
       <select name="Yaers of Operations">
-        <option value="">Select Yaers of Operations</option>
-        <option value="less than 6 months">less than 6 months</option>
-        <option value="6 months - 1 year">6 months - 1 year</option>
-        <option value="1 year - 3 years">1 year - 3 years</option>
-        <option value="more than 3 years">more than 3 years</option>
-      </select>
-      <select name="Sector">
-        <option value="">Select Sector</option>
-        <option value="Healthcare">Healthcare</option>
-        <option value="F&B HORECA">F&B HORECA</option>
-        <option value="Furniture">Furniture</option>
-        <option value="Cars spare-part">Cars spare-part</option>
-        <option value="Various e-commerce commodities">
-          Various e-commerce commodities
+        <option value="">
+          {lang === "AR" ? "عدد سنوات العمل" : "Select Yaers of Operations"}
         </option>
-        <option value="else">else</option>
+        <option value="less than 6 months">
+          {lang === "AR" ? "اقل من 6 شهور" : "less than 6 months"}
+        </option>
+        <option value="6 months - 1 year">
+          {lang === "AR" ? "6 شهور - 1 سنه" : "6 months - 1 year"}
+        </option>
+        <option value="1 year - 3 years">
+          {lang === "AR" ? "1 سنه - 3 سنين" : "1 year - 3 years"}
+        </option>
+        <option value="more than 3 years">
+          {lang === "AR" ? "اكثر من 3 سنين" : "more than 3 years"}
+        </option>
+      </select>
+
+      <select name="Sector">
+        <option value="">
+          {lang === "AR" ? "اختر المجال" : "Select Sector"}
+        </option>
+        <option value="Healthcare">
+          {lang === "AR" ? "الصحة" : "Healthcare"}
+        </option>
+        <option value="F&B HORECA">
+          {lang === "AR" ? "الطعام والشراب" : "F&B HORECA"}
+        </option>
+        <option value="Furniture">
+          {lang === "AR" ? "الأثاث" : "Furniture"}
+        </option>
+        <option value="Cars spare-part">
+          {lang === "AR" ? "قطع غيار السيارات" : "Cars spare-part"}
+        </option>
+        <option value="Various e-commerce commodities">
+          {lang === "AR"
+            ? "سلع تجارة إلكترونية متنوعة"
+            : "Various e-commerce commodities"}
+        </option>
+        <option value="else">{lang === "AR" ? "آخر" : "else"}</option>
       </select>
 
       <input
         name="email"
         type="email"
-        placeholder="example@mail.com..."
-      ></input>
+        placeholder={
+          lang === "AR" ? "البريد الإلكتروني..." : "example@mail.com..."
+        }
+      />
+
       <input
         name="phone number"
-        type="phone"
-        placeholder="phone number..."
-      ></input>
+        type="tel"
+        placeholder={lang === "AR" ? "رقم الهاتف..." : "phone number..."}
+        style={{ textAlign: lang === "AR" ? "right" : "left" }}
+      />
+
       <select name="Monetary Value">
-        <option value="">Monetary Value</option>
-        <option value="less than 7,000 SAR">less than 7,000 SAR</option>
-        <option value="7,000 - 13,000 SAR">7,000 - 13,000 SAR</option>
-        <option value="more than 13,000 SAR">more than 13,000 SAR</option>
+        <option value="">
+          {lang === "AR" ? "القيمة المالية" : "Monetary Value"}
+        </option>
+        <option value="less than 7,000 SAR">
+          {lang === "AR" ? "أقل من 7,000 ريال سعودي" : "less than 7,000 SAR"}
+        </option>
+        <option value="7,000 - 13,000 SAR">
+          {lang === "AR" ? "7,000 - 13,000 ريال سعودي" : "7,000 - 13,000 SAR"}
+        </option>
+        <option value="more than 13,000 SAR">
+          {lang === "AR" ? "أكثر من 13,000 ريال سعودي" : "more than 13,000 SAR"}
+        </option>
       </select>
+
       <select name="Number of invoices per month">
-        <option value="">Number of invoices per month</option>
-        <option value="less than 1000 SAR">less than 1000 SAR</option>
-        <option value="1,000 - 7,000 SAR">1,000 - 7,000 SAR</option>
-        <option value="more than 7000 SAR">more than 7000 SAR</option>
+        <option value="">
+          {lang === "AR"
+            ? "عدد الفواتير شهريًا"
+            : "Number of invoices per month"}
+        </option>
+        <option value="less than 1000 SAR">
+          {lang === "AR" ? "أقل من 1000 ريال سعودي" : "less than 1000 SAR"}
+        </option>
+        <option value="1,000 - 7,000 SAR">
+          {lang === "AR" ? "1000 - 7000 ريال سعودي" : "1,000 - 7,000 SAR"}
+        </option>
+        <option value="more than 7000 SAR">
+          {lang === "AR" ? "أكثر من 7000 ريال سعودي" : "more than 7000 SAR"}
+        </option>
       </select>
+
       <select name="Preferred method of payments">
-      <option value="">Preferred method of payments</option>
-        <option value="yes">Bank transfer</option>
-        <option value="no">Cash</option>
-        <option value="no">Others</option>
-        <option value="no">No problems with all the payments above</option>
+        <option value="">
+          {lang === "AR"
+            ? "طريقة الدفع المفضلة"
+            : "Preferred method of payments"}
+        </option>
+        <option value="yes">
+          {lang === "AR" ? "تحويل بنكي" : "Bank transfer"}
+        </option>
+        <option value="no">{lang === "AR" ? "نقدًا" : "Cash"}</option>
+        <option value="others">{lang === "AR" ? "أخرى" : "Others"}</option>
+        <option value="no-problems">
+          {lang === "AR"
+            ? "لا مشكلة مع جميع الوسائل أعلاه"
+            : "No problems with all the payments above"}
+        </option>
       </select>
+
       <button className={styles.btn} type="submit" disabled={state.submitting}>
         {lang === "AR" ? "ارسال" : "Submit"}
       </button>
