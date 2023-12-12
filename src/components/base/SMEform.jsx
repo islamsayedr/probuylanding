@@ -5,9 +5,13 @@ import styles from "./SMEform.module.css";
 export default function SMEform({ lang }) {
   const [state, handleSubmit] = useForm("xvojewlp");
   const [selectedSector, setSelectedSector] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
 
   const handleSectorChange = (event) => {
     setSelectedSector(event.target.value);
+  };
+  const handleLocationChange = (event) => {
+    setSelectedLocation(event.target.value);
   };
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
@@ -28,6 +32,34 @@ export default function SMEform({ lang }) {
         placeholder={lang === "AR" ? "اسم الشركة..." : "company name..."}
         required
       ></input>
+      <select
+        name="Company Location"
+        value={selectedLocation}
+        onChange={handleLocationChange}
+        required
+      >
+        <option value="">
+          {lang === "AR" ? "اختر موقع الشركة" : "Select Company Location"}
+        </option>
+        <option value="Inside Saudi Arabia">
+          {lang === "AR"
+            ? "داخل المملكه العربية السعودية"
+            : "Inside Saudi Arabia"}
+        </option>
+        <option value="Outside Saudi Arabia">
+          {lang === "AR"
+            ? "خارج المملكه العربية السعودية"
+            : "Outside Saudi Arabia"}
+        </option>
+      </select>
+      {selectedLocation === "Inside Saudi Arabia" && (
+        <input
+          name="Area"
+          type="text"
+          placeholder={lang === "AR" ? "اسم المنطقة..." : "area name..."}
+          required
+        />
+      )}
       <input
         name="CR Number"
         type="number"
@@ -78,7 +110,9 @@ export default function SMEform({ lang }) {
             ? "سلع تجارة إلكترونية متنوعة"
             : "Various e-commerce commodities"}
         </option>
-        <option value="else">{lang === "AR" ? "مجال اخر" : "Other Sector"}</option>
+        <option value="else">
+          {lang === "AR" ? "مجال اخر" : "Other Sector"}
+        </option>
       </select>
       {selectedSector === "else" && (
         <input

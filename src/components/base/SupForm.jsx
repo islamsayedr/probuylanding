@@ -1,8 +1,18 @@
+import { useState } from "react";
 import { useForm } from "@formspree/react";
 import styles from "./SupForm.module.css";
 
 export default function SupForm({ lang }) {
   const [state, handleSubmit] = useForm("mdorqpne");
+  const [selectedSector, setSelectedSector] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+
+  const handleSectorChange = (event) => {
+    setSelectedSector(event.target.value);
+  };
+  const handleLocationChange = (event) => {
+    setSelectedLocation(event.target.value);
+  };
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
   }
@@ -22,6 +32,36 @@ export default function SupForm({ lang }) {
         placeholder={lang === "AR" ? "اسم الشركة..." : "company name..."}
         required
       ></input>
+
+      <select
+        name="Company Location"
+        value={selectedLocation}
+        onChange={handleLocationChange}
+        required
+      >
+        <option value="">
+          {lang === "AR" ? "اختر موقع الشركة" : "Select Company Location"}
+        </option>
+        <option value="Inside Saudi Arabia">
+          {lang === "AR"
+            ? "داخل المملكه العربية السعودية"
+            : "Inside Saudi Arabia"}
+        </option>
+        <option value="Outside Saudi Arabia">
+          {lang === "AR"
+            ? "خارج المملكه العربية السعودية"
+            : "Outside Saudi Arabia"}
+        </option>
+      </select>
+      {selectedLocation === "Inside Saudi Arabia" && (
+        <input
+          name="Area"
+          type="text"
+          placeholder={lang === "AR" ? "اسم المنطقة..." : "area name..."}
+          required
+        />
+      )}
+
       <input
         name="CR Number"
         type="number"
@@ -46,7 +86,12 @@ export default function SupForm({ lang }) {
         </option>
       </select>
 
-      <select name="Sector" required>
+      <select
+        name="Sector"
+        value={selectedSector}
+        onChange={handleSectorChange}
+        required
+      >
         <option value="">
           {lang === "AR" ? "اختر المجال" : "Select Sector"}
         </option>
@@ -67,8 +112,18 @@ export default function SupForm({ lang }) {
             ? "سلع تجارة إلكترونية متنوعة"
             : "Various e-commerce commodities"}
         </option>
-        <option value="else">{lang === "AR" ? "آخر" : "else"}</option>
+        <option value="else">
+          {lang === "AR" ? "مجال اخر" : "Other Sector"}
+        </option>
       </select>
+      {selectedSector === "else" && (
+        <input
+          name="sector"
+          type="text"
+          placeholder={lang === "AR" ? "ادخل المجال..." : "add sector..."}
+          required
+        />
+      )}
 
       <input
         name="email"
@@ -89,7 +144,9 @@ export default function SupForm({ lang }) {
 
       <select name="Monthly Procurement Monetary Value" required>
         <option value="">
-          {lang === "AR" ? "القيمة المالية لمشترياتك الشهرية" : "Monthly Procurement Monetary Value"}
+          {lang === "AR"
+            ? "القيمة المالية لمشترياتك الشهرية"
+            : "Monthly Procurement Monetary Value"}
         </option>
         <option value="less than 7,000 SAR">
           {lang === "AR" ? "أقل من 7,000 ريال سعودي" : "less than 7,000 SAR"}
