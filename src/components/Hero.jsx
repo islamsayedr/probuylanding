@@ -10,7 +10,7 @@ export default function Hero({ lang }) {
   };
   const enText = {
     header: `Transforming SMEs with Flexible <i>Financing Solutions</i>`,
-    action01: "Rigister Now",
+    action01: "Register Now",
     action02: "Learn More",
     paragraph:
       "Are you an SME facing liquidity challenges when procuring? ProBuy is here to revolutionise the way you manage your procurement payments. Introducing our innovative products designed exclusively for small and medium-sized enterprises.",

@@ -14,20 +14,23 @@ export default function SupForm({ lang }) {
         name="User Name"
         type="text"
         placeholder={lang === "AR" ? "اكتب اسمك..." : "Your name..."}
+        required
       ></input>
       <input
         name="Company name"
         type="text"
         placeholder={lang === "AR" ? "اسم الشركة..." : "company name..."}
+        required
       ></input>
       <input
         name="CR Number"
         type="number"
         placeholder={lang === "AR" ? "رقم السجل التجارى..." : "CR Number..."}
+        required
       ></input>
-      <select name="Yaers of Operations">
+      <select name="Years of Operations" required>
         <option value="">
-          {lang === "AR" ? "عدد سنوات العمل" : "Select Yaers of Operations"}
+          {lang === "AR" ? "عدد سنوات العمل" : "Select Years of Operations"}
         </option>
         <option value="less than 6 months">
           {lang === "AR" ? "اقل من 6 شهور" : "less than 6 months"}
@@ -43,7 +46,7 @@ export default function SupForm({ lang }) {
         </option>
       </select>
 
-      <select name="Sector">
+      <select name="Sector" required>
         <option value="">
           {lang === "AR" ? "اختر المجال" : "Select Sector"}
         </option>
@@ -73,6 +76,7 @@ export default function SupForm({ lang }) {
         placeholder={
           lang === "AR" ? "البريد الإلكتروني..." : "example@mail.com..."
         }
+        required
       />
 
       <input
@@ -80,11 +84,12 @@ export default function SupForm({ lang }) {
         type="tel"
         placeholder={lang === "AR" ? "رقم الهاتف..." : "phone number..."}
         style={{ textAlign: lang === "AR" ? "right" : "left" }}
+        required
       />
 
-      <select name="Monetary Value">
+      <select name="Monthly Procurement Monetary Value" required>
         <option value="">
-          {lang === "AR" ? "القيمة المالية" : "Monetary Value"}
+          {lang === "AR" ? "القيمة المالية لمشترياتك الشهرية" : "Monthly Procurement Monetary Value"}
         </option>
         <option value="less than 7,000 SAR">
           {lang === "AR" ? "أقل من 7,000 ريال سعودي" : "less than 7,000 SAR"}
@@ -97,24 +102,24 @@ export default function SupForm({ lang }) {
         </option>
       </select>
 
-      <select name="Number of invoices per month">
+      <select name="Number of invoices per month" required>
         <option value="">
           {lang === "AR"
             ? "عدد الفواتير شهريًا"
             : "Number of invoices per month"}
         </option>
         <option value="less than 1000 SAR">
-          {lang === "AR" ? "أقل من 1000 ريال سعودي" : "less than 1000 SAR"}
+          {lang === "AR" ? "أقل من 1000" : "less than 1000"}
         </option>
         <option value="1,000 - 7,000 SAR">
-          {lang === "AR" ? "1000 - 7000 ريال سعودي" : "1,000 - 7,000 SAR"}
+          {lang === "AR" ? "1000 - 7000" : "1,000 - 7,000"}
         </option>
         <option value="more than 7000 SAR">
-          {lang === "AR" ? "أكثر من 7000 ريال سعودي" : "more than 7000 SAR"}
+          {lang === "AR" ? "أكثر من 7000" : "more than 7000"}
         </option>
       </select>
 
-      <select name="Preferred method of payments">
+      <select name="Preferred method of payments" required>
         <option value="">
           {lang === "AR"
             ? "طريقة الدفع المفضلة"

@@ -29,7 +29,7 @@ export default function Why({ lang }) {
           />
           <div className={styles.tabs}>
             <Tab id="sme" active={active} onTab={() => setActive("sme")}>
-              {lang === "AR" ? "مقدم خدمات" : "I’m an SME"}
+              {lang === "AR" ? "انا صاحب خدمات صغيره/متوسطة" : "I’m an SME"}
             </Tab>
             <Tab id="supp" active={active} onTab={() => setActive("supp")}>
               {lang === "AR" ? "مورد" : "I’m a supplier"}
@@ -106,7 +106,7 @@ const arSME = [
   {
     id: 3,
     icon: "./assets/web/SIMwhy03.svg",
-    title: " موافقة سريعة وسهلة",
+    title: " موافقة فورية وسهلة",
     des: "استمتع بتسجيل سريع وموافقة سهلة، يتيح لك الوصول الى السيولة (تمويل) الذي تحتاجه عندما تحتاجه",
   },
   {
@@ -139,7 +139,7 @@ const enSupp = [
   {
     id: 4,
     icon: "./assets/web/whysupp04.svg",
-    title: "",
+    title: "Proper Liguidity Management",
     des: "Probuy is here to help you manage your liquidity.",
   },
 ];
@@ -166,7 +166,7 @@ const arSupp = [
   {
     id: 4,
     icon: "./assets/web/whysupp04.svg",
-    title: "",
+    title: "ادارة السيولة بشكل افضل",
     des: "Probuy هنا لمساعدتك في إدارة السيولة الخاصة بك.",
   },
 ];

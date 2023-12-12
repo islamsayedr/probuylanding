@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { useForm } from "@formspree/react";
 import styles from "./SMEform.module.css";
 
 export default function SMEform({ lang }) {
   const [state, handleSubmit] = useForm("xvojewlp");
+  const [selectedSector, setSelectedSector] = useState("");
+
+  const handleSectorChange = (event) => {
+    setSelectedSector(event.target.value);
+  };
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
   }
@@ -14,20 +20,23 @@ export default function SMEform({ lang }) {
         name="User Name"
         type="text"
         placeholder={lang === "AR" ? "اكتب اسمك..." : "Your name..."}
+        required
       ></input>
       <input
         name="Company name"
         type="text"
         placeholder={lang === "AR" ? "اسم الشركة..." : "company name..."}
+        required
       ></input>
       <input
         name="CR Number"
         type="number"
         placeholder={lang === "AR" ? "رقم السجل التجارى..." : "CR Number..."}
+        required
       ></input>
-      <select name="Yaers of Operations">
+      <select name="Years of Operations" required>
         <option value="">
-          {lang === "AR" ? "عدد سنوات العمل" : "Select Yaers of Operations"}
+          {lang === "AR" ? "عدد سنوات العمل" : "Select Years of Operations"}
         </option>
         <option value="less than 6 months">
           {lang === "AR" ? "اقل من 6 شهور" : "less than 6 months"}
@@ -43,8 +52,12 @@ export default function SMEform({ lang }) {
         </option>
       </select>
 
-      
-      <select name="Sector">
+      <select
+        name="Sector"
+        value={selectedSector}
+        onChange={handleSectorChange}
+        required
+      >
         <option value="">
           {lang === "AR" ? "اختر المجال" : "Select Sector"}
         </option>
@@ -65,8 +78,16 @@ export default function SMEform({ lang }) {
             ? "سلع تجارة إلكترونية متنوعة"
             : "Various e-commerce commodities"}
         </option>
-        <option value="else">{lang === "AR" ? "آخر" : "else"}</option>
+        <option value="else">{lang === "AR" ? "مجال اخر" : "Other Sector"}</option>
       </select>
+      {selectedSector === "else" && (
+        <input
+          name="sector"
+          type="text"
+          placeholder={lang === "AR" ? "ادخل المجال..." : "add sector..."}
+          required
+        />
+      )}
 
       <input
         name="email"
@@ -74,18 +95,22 @@ export default function SMEform({ lang }) {
         placeholder={
           lang === "AR" ? "البريد الإلكتروني..." : "example@mail.com..."
         }
+        required
       />
 
       <input
         name="phone number"
         type="tel"
         placeholder={lang === "AR" ? "رقم الهاتف..." : "phone number..."}
-        style={{textAlign: lang==="AR" ? "right" : "left"}}
+        style={{ textAlign: lang === "AR" ? "right" : "left" }}
+        required
       />
 
-      <select name="Monetary Value">
+      <select name="Monthly Procurement Monetary Value" required>
         <option value="">
-          {lang === "AR" ? "القيمة المالية" : "Monetary Value"}
+          {lang === "AR"
+            ? "القيمة المالية لمشترياتك الشهرية"
+            : "Monthly Procurement Monetary Value"}
         </option>
         <option value="less than 7,000 SAR">
           {lang === "AR" ? "أقل من 7,000 ريال سعودي" : "less than 7,000 SAR"}
@@ -104,7 +129,8 @@ export default function SMEform({ lang }) {
           : "Do you have a POS System?"}
       </label>
 
-      <select name="Do you have a POS System?">
+      <select name="Do you have a POS System?" required>
+        <option value="">{lang === "AR" ? "اختر" : "Select"}</option>
         <option value="yes">{lang === "AR" ? "نعم" : "Yes"}</option>
         <option value="no">{lang === "AR" ? "لا" : "No"}</option>
       </select>

@@ -35,7 +35,7 @@ export default function JoinUs({ lang }) {
         <div style={{ flex: 1 }} className={styles.formContainer}>
           <div className={styles.tabs}>
             <Tab id="sme" active={active} onTab={() => setActive("sme")}>
-              {lang === "AR" ? "مقدم خدمات" : "I’m an SME"}
+              {lang === "AR" ? "انا صاحب خدمات صغيره/متوسطة" : "I’m an SME"}
             </Tab>
             <Tab id="supp" active={active} onTab={() => setActive("supp")}>
               {lang === "AR" ? "مورد" : "I’m a supplier"}
